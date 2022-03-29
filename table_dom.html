@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+           
+        }
+        th, td{
+            padding: 15px 25px;
+            border: 1px solid #000;
+        }
+    </style>
+    <script>
+        function fn()
+        {
+            let t = document.createElement('table');
+          let h = document.createElement('thead');
+            let tbody = document.createElement('tbody');
+
+            t.appendChild(h);
+            t.appendChild(tbody);
+// first one
+
+        document.getElementById('tab').appendChild(t);
+        let row_1 = document.createElement('tr');
+         let heading_1 = document.createElement('th');
+           heading_1.innerHTML = "id";
+          let heading_2 = document.createElement('th');
+          heading_2.innerHTML = "Name";
+          let heading_3 = document.createElement('th');
+          heading_3.innerHTML = "location";
+
+         row_1.appendChild(heading_1);
+         row_1.appendChild(heading_2);
+          row_1.appendChild(heading_3);
+           h.appendChild(row_1);
+
+// second one
+
+           let row_2 = document.createElement('tr');
+         let row_2_data_1 = document.createElement('td');
+         row_2_data_1.innerHTML = "1.";
+         let row_2_data_2 = document.createElement('td');
+         row_2_data_2.innerHTML = "mahaboob";
+           let row_2_data_3 = document.createElement('td');
+          row_2_data_3.innerHTML = "banglore";
+
+       row_2.appendChild(row_2_data_1);
+        row_2.appendChild(row_2_data_2);
+        row_2.appendChild(row_2_data_3);
+        tbody.appendChild(row_2);
+
+        //third one
+
+        let row_3 = document.createElement('tr');
+     let row_3_data_1 = document.createElement('td');
+      row_3_data_1.innerHTML = "2.";
+     let row_3_data_2 = document.createElement('td');
+      row_3_data_2.innerHTML = "suresh";
+     let row_3_data_3 = document.createElement('td');
+      row_3_data_3.innerHTML = "hyderabad";
+
+         row_3.appendChild(row_3_data_1);
+        row_3.appendChild(row_3_data_2);
+        row_3.appendChild(row_3_data_3);
+          tbody.appendChild(row_3);
+
+   
+        }
+    </script>
+
+</head>
+<body>
+    <button onclick="fn()">create table</button>
+    <div id="tab">
+
+    </div>
+</body>
+</html>
